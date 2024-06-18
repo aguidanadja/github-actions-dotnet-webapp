@@ -11,3 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: echo "Ação executada" 
+    - run: |
+        if [ "$(date +%H)" = "00" ]; then
+          echo "Ação executada"
+        fi # This script checks if the current hour is 00 (midnight) and logs "Ação executada"
